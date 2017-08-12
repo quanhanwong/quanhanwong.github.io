@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery-3.2.1.js"></script>
+    <title>QHQHQHQHQHQH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Built with Next Academy">
+    <meta property="og:site_name" content="My Portfolio">
+    <meta property="og:image" content="https://www.nextacademy.com/img/share/nextacademy-generic.jpg">
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#about" class="nav-links"> GO to about </a>
+      <a href="#show" class="nav-links"> show more </a>
+      <a href="#sausage" class="nav-links"> SAUSAGE </a>
+      <a href="#rick" class="nav-links"> special </a>
+
+    </div>
+    <div class="container">
+
+      <div class="small-container" id="about">
+        <h1>Hello, I'm Quan Han.</h1>
+        <p>This is my first website, and I'm interested in coding.</p>
+        <p>I'm from Johor and I love music.</p>
+      </div>
+
+      <div class="small-container" id="show">
+        <h1>What I've done in the past</h1>
+        <ol>
+          <li id="special">Learn to code</li>
+          <li>Some digital marketing</li>
+          <li>Travel</li>
+        </ol>
+        <a href="https://www.nextacademy.com">
+          Learn to code from Next Academy
+        </a>
+      </div>
+
+        <div class="small-container" id="sausage">
+          <h2>behold the sausage</h2>
+          <img src="sausage.gif">
+      </div>
+
+        <div class="small-container" id="rick">
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          </iframe>
+        </div>
+
+          <div class="small-container">
+            <button id="surprise-button">CLick me for Surprise</button>
+            <div id="haha"></div>
+          </div>
+
+
+      </div>
+
+    </div>
+  </body>
+  <script>
+  $(document).ready(function() {
+    $("#surprise-button").click(function(e) {
+      $.get("http://api.giphy.com/v1/gifs/random?tag=cat&api_key=dc6zaTOxFJmzC", function(res) {
+        $('#haha').html('<img src="' + res.data.image_url + '">' )
+      })
+    })
+  })
+</script>
+</html>
